@@ -134,6 +134,7 @@ header {
 			color: white;
 		}
 	}
+	.navbar-brand__subtitle {display: none;}
 	.navbar-nav {
 		letter-spacing: 1px;
 		li {
@@ -183,16 +184,27 @@ header {
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
 	    .navbar-brand {
-	        font-size: 2em;
+	        font-size: 3em;
 	        -webkit-transition: all 0.3s;
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
 	    }
+	    .navbar-brand__subtitle {
+	    	font-size: .84em;
+    		float: none;
+    		display: block;
+	    }
+
     }
     .navbar-custom.affix {
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
+	    }
+	    .navbar-brand__subtitle {
+	    	font-size: .5em;
+	    	position: relative;
+	    	left: 99999px;
 	    }
 	}
 }
@@ -220,6 +232,9 @@ section.success {
 }
 
 #portfolio {
+	.portfolio-wrap.loading {
+		min-height: 300px;
+	}
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
@@ -260,6 +275,11 @@ section.success {
             }
         }
     }
+    .loading {
+		background: #fff url(../img/ajax-loader.gif) center center no-repeat;
+		color: #fff;
+	}
+	.show-more { display: none; }
     * {
         z-index: 2;
     }

@@ -4,10 +4,13 @@ var browserSync = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
+var concat = require('gulp-concat');
+// var del = require('del');
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src('less/freelancer.less')
+    return gulp.src('less/main.less')
         .pipe(less())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
@@ -15,20 +18,34 @@ gulp.task('less', function() {
         }))
 });
 
+// Concat CSS
+
+
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/freelancer.css')
+    return gulp.src('css/base.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename('main.min.css'))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }))
 });
 
+// Concat JS
+// gulp.task('concat-js', function(){
+//     return gulp.src([
+//             'vendor/jquery/jquery.min.js',
+//             'vendor/bootstrap/js/bootstrap.min.js',
+//             'js/*.js'
+//         ])
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('js'))
+// });
+
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/freelancer.js')
+    return gulp.src('js/theme.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
@@ -84,11 +101,10 @@ gulp.task('browserSync', function() {
 // gulp.task('build')
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'less'], function() {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('css/*.css', ['minify-css']);
-    gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
+    gulp.watch('css/*.css', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
