@@ -61,7 +61,7 @@
                 limit = current + count;
     
             // Ajax call
-            jqxhr = $.getJSON( "js/data.json", function() {
+            jqxhr = $.getJSON( "js/datsa.json", function() {
 
             })
             .done(function(data) {
@@ -144,6 +144,9 @@
             })
             .fail(function() {
                 // Display error
+                teaserHTML.append(
+                    `<div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>`
+                    );
             })
             .always(function(){
                 // Remove loading
@@ -160,11 +163,15 @@
 
     }());
 
-    // Run func
+    // Inital run of displayPortfolios func
+    // @Params: init (number of items to be displayed)
     displayPortfolios.init(6);
 
     // Show more button
     $('.show-more').on('click', function(event){
+        // Run displayPortfolios func on click
+        // @Params: init (number of items to be displayed)
+        //          event (clickable event)
         displayPortfolios.init(3, $(event.currentTarget));
     });
 
