@@ -20,7 +20,7 @@ var banner = ['/*!\n',
 gulp.task('less', function() {
     return gulp.src('less/freelancer.less')
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
+        // .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -42,7 +42,7 @@ gulp.task('minify-css', ['less'], function() {
 gulp.task('minify-js', function() {
     return gulp.src('js/freelancer.js')
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
+        // .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({
@@ -70,7 +70,7 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -82,7 +82,7 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
