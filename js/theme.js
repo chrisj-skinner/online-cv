@@ -61,7 +61,7 @@
                 limit = current + count;
     
             // Ajax call
-            jqxhr = $.getJSON( "js/datsa.json", function() {
+            jqxhr = $.getJSON( "js/data.json", function() {
 
             })
             .done(function(data) {
