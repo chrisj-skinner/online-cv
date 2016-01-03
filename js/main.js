@@ -50,12 +50,6 @@
                 // Set the limit
                 limit = current + count;
 
-
-                console.log('limit = ' + limit);
-                console.log('count = ' + count);
-                console.log('current = ' + current);
-                // console.log($(portfolioHTML));
-
                 // Test if portfolios is stored
                 if (portfolios === undefined) {
                     // Ajax call here and store results in localStorage
@@ -197,14 +191,11 @@
                             "service": "Web Development"
                         }
                     ];
-                    console.log('we set the porfolios');
                 } else {
-                    console.log('no need as it was already set');
+                    // Assign it to localStorage
                 }
-                console.log(portfolios);
 
-            console.log(current);
-            console.log(limit);
+            // Begin loop
             for(let i = current; i < limit; i++){
 
                 // Check if current portfolio exists
@@ -216,7 +207,6 @@
                 };
 
                 // Build html teaserContent
-                console.log(portfolios[i].title);
                 teaserContent += `<div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal` + (i+1) + `" class="new portfolio-link" data-toggle="modal">
                         <div class="caption">
