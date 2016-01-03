@@ -32,169 +32,185 @@
 
     // Display portfolios
     const displayPortfolios = function(){
-
+        let exports = {},
             // Set sticky points
             // Intro to portfolios
-        let teaserHTML = $('.portfolio-wrap'),
-            // Portfolio Modal popups
-            portfolioHTML = $('footer'),
-            // Current portfolios
-            current = $('.portfolio-item').length,
-            limit = current + 4;
-            console.log(current);
+            teaserHTML = $('.portfolio-wrap');
+            
 
-        const init = function(){
-            getData();
-        };
-
-        const getData = function(){
-            // Ajax call here
+        exports.init = function(count){
+            
             let teaserContent = '',
                 portfolioContent = '',
-                portfolios = [
-                    {
-                        "title": "Project Title 1",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                portfolios,
+                // Portfolio Modal popups
+                portfolioHTML = $('.portfolio-modal').last(),
+                // Current portfolios
+                current = $('.portfolio-item').length,
+                // Set the limit
+                limit = current + count;
+
+
+                console.log('limit = ' + limit);
+                console.log('count = ' + count);
+                console.log('current = ' + current);
+                // console.log($(portfolioHTML));
+
+                // Test if portfolios is stored
+                if (portfolios === undefined) {
+                    // Ajax call here and store results in localStorage
+                    portfolios = [
+                        {
+                            "title": "Project Title 1",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
                             },
-                        },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 2",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
                             },
+                            "date": "April 2014",
+                            "service": "Web Development"
                         },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 3",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                        {
+                            "title": "Project Title 2",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
                             },
-                        },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 4",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
                             },
+                            "date": "April 2014",
+                            "service": "Web Development"
                         },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 5",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                        {
+                            "title": "Project Title 3",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
                             },
-                        },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 6",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
                             },
+                            "date": "April 2014",
+                            "service": "Web Development"
                         },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 7",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                        {
+                            "title": "Project Title 4",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
                             },
-                        },
-                        "url": "#",
-                        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
-                        },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    },
-                    {
-                        "title": "Project Title 8",
-                        "img": {
-                            "sizes": {
-                                "thumbnail": "img/portfolio/submarine.png",
-                                "full": "img/portfolio/submarine.png"
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
                             },
+                            "date": "April 2014",
+                            "service": "Web Development"
                         },
-                        "url": "#",
-                        "description": "<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>",
-                        "client": {
-                            "name": "Start Bootstrap",
-                            "url": "#"
+                        {
+                            "title": "Project Title 5",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
+                            },
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
+                            },
+                            "date": "April 2014",
+                            "service": "Web Development"
                         },
-                        "date": "April 2014",
-                        "service": "Web Development"
-                    }
-                ];
+                        {
+                            "title": "Project Title 6",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
+                            },
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
+                            },
+                            "date": "April 2014",
+                            "service": "Web Development"
+                        },
+                        {
+                            "title": "Project Title 7",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
+                            },
+                            "url": "#",
+                            "description": "Use this area of the page to describe your project. The icon above is part of a free icon set byFlat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
+                            },
+                            "date": "April 2014",
+                            "service": "Web Development"
+                        },
+                        {
+                            "title": "Project Title 8",
+                            "img": {
+                                "sizes": {
+                                    "thumbnail": "img/portfolio/submarine.png",
+                                    "full": "img/portfolio/submarine.png"
+                                },
+                            },
+                            "url": "#",
+                            "description": "<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>",
+                            "client": {
+                                "name": "Start Bootstrap",
+                                "url": "#"
+                            },
+                            "date": "April 2014",
+                            "service": "Web Development"
+                        }
+                    ];
+                    console.log('we set the porfolios');
+                } else {
+                    console.log('no need as it was already set');
+                }
+                console.log(portfolios);
 
             console.log(current);
+            console.log(limit);
             for(let i = current; i < limit; i++){
+
+                // Check if current portfolio exists
                 if (portfolios[i] === undefined) {
                     // Change show-more button -> no-more
-                    $('.show-more').css('display', 'none');
+                    $('.show-more').html('No more').attr('disabled', 'true');;
                     // Break out of loop
                     break;
                 };
@@ -255,27 +271,21 @@
 
             // Add teaserContent to html
             teaserHTML.append(teaserContent);
-            console.log(teaserContent);
 
             // Add portfolioContent to html
-            portfolioHTML.append(portfolioContent);
-            console.log(portfolioContent);
+            portfolioHTML.after(portfolioContent);
         };
 
-        return init;
+        return exports;
 
     }();
 
     // Run func
-    // displayPortfolios();
+    displayPortfolios.init(6);
 
     // Ajax show more
     $('.show-more').on('click', function(){
-        displayPortfolios();
+        displayPortfolios.init(3);
     });
 
 }(jQuery); // End of use strict
-
-
-
-
