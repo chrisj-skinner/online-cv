@@ -134,6 +134,7 @@ header {
 			color: white;
 		}
 	}
+	.navbar-brand__subtitle {display: none;}
 	.navbar-nav {
 		letter-spacing: 1px;
 		li {
@@ -188,13 +189,22 @@ header {
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
 	    }
-	    .navbar-brand__small { font-size: 1.5em; }
+	    .navbar-brand__subtitle {
+	    	font-size: .84em;
+    		float: none;
+    		display: block;
+	    }
 
     }
     .navbar-custom.affix {
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
+	    }
+	    .navbar-brand__subtitle {
+	    	font-size: .5em;
+	    	position: relative;
+	    	left: 99999px;
 	    }
 	}
 }
