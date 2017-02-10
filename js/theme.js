@@ -1,5 +1,14 @@
-// Theme JavaScript
+// Dependencies
+var jQuery = require('jquery');
+window.$ = window.jQuery = jQuery;
 
+require('bootstrap');
+require('jquery.easing');
+
+jQuery.noConflict(true);
+
+
+// Theme JavaScript
 !function($) {
     "use strict"; // Start of use strict
 
