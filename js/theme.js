@@ -2,11 +2,10 @@
 var jQuery = require('jquery');
 window.$ = window.jQuery = jQuery;
 
-require('bootstrap');
+require('bootstrap/dist/js/npm.js');
 require('jquery.easing');
 
 jQuery.noConflict(true);
-
 
 // Theme JavaScript
 !function($) {
@@ -183,6 +182,5 @@ jQuery.noConflict(true);
         //          event (clickable event)
         displayPortfolios.init(3, $(event.currentTarget));
     });
-
 
 }(jQuery); // End of use strict
