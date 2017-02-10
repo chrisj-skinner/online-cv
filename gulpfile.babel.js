@@ -53,7 +53,7 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('js'))
 });
 
-// Copy vendor libraries from /node_modules into /vendor
+// Copy
 gulp.task('copy', function() {
     return gulp.src([
         'css/*.min.css*',
@@ -84,9 +84,10 @@ gulp.task('build', ['default', 'copy']);
 // gulp.task('build')
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less'], function() {
+gulp.task('dev', ['browserSync', 'default'], function() {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('js/*.js', '!js/*.min.js', ['minify-js']);
+    // Require bootstrap js modules as neeeded in ../npm.js
+    gulp.watch(['js/theme.js', 'node_modules/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js']);
     // Reloads the browser whenever HTML CSS or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('css/*.css', browserSync.reload);
