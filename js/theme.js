@@ -12,7 +12,7 @@ jQuery.noConflict(true);
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', event => {
+    $('.page-scroll a').bind('click', function(event) {
         let $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -170,7 +170,7 @@ jQuery.noConflict(true);
     }());
 
     // Inital run of displayPortfolios func
-    // @Params: init (number of items to be displayed)
+    // @Param: init - number of items to be displayed
     displayPortfolios.init(6);
 
     // Show more button function
