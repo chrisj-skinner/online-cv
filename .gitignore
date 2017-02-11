@@ -1,3 +1,7 @@
 node_modules
 .DS_Store
-css/*
+vendor
+js/main.*
+css
+fonts
+dist
