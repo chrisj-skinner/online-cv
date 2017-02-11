@@ -106,13 +106,13 @@ gulp.task('setup', ['fonts']);
 
 // Dev task with browserSync and watch
 gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
-    gulp.watch(['less/*.less', 'vendor/bootstrap/dist/js/npm.js'], ['less']);
-    // Require bootstrap js modules as neeeded in ../npm.js
-    gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js']);
-    // Reloads the browser whenever HTML CSS or JS files change
+    // Watch file changes
+    gulp.watch(['less/*.less', 'vendor/bootstrap/less/bootstrap.less'], ['less']);
+    gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js'] );
+    // Reloads the browser on file change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('css/*.css', browserSync.reload);
-    gulp.watch('js/*.js', browserSync.reload);
+    gulp.watch('js/main.min.js', browserSync.reload);
 });
 
 // Default build task with dist creation
