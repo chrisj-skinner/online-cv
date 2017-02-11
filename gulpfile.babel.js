@@ -31,7 +31,7 @@ gulp.task('less', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/base.css')
+    return gulp.src('css/main.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('css'))
@@ -53,16 +53,43 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('js'))
 });
 
-// Copy
+// Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', function() {
+    return gulp.src([
+        'node_modules/bootstrap/**',
+        ])
+    .pipe(gulp.dest('vendor/bootstrap')),
+
+    gulp.src([
+        'node_modules/font-awesome/**',
+        ])
+    .pipe(gulp.dest('vendor/font-awesome'))
+});
+
+// Copy fonts over
+gulp.task('fonts', ['copy'], function(){
+    return gulp.src([
+        'vendor/bootstrap/fonts/**',
+        'vendor/font-awesome/fonts/**'
+        ])
+    .pipe(gulp.dest('fonts'))
+});
+
+// Clean up task
+gulp.task('clean', function(){
+    del(['css/main.css'])
+});
+
+// Create dist folder
+gulp.task('dist', ['clean'], function() {
     return gulp.src([
         'css/*.min.css*',
         'js/*.min.js*',
-        'vendor/font-awesome/fonts/**',
+        'fonts/*',
         'index.html',
         'img/**'],
         { base: './' })
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
 });
 
 // Configure the browserSync task
@@ -74,22 +101,19 @@ gulp.task('browserSync', function() {
     })
 });
 
-// Run everything
-gulp.task('default', ['minify-css', 'minify-js']);
+// NOTE: First run everything to get setup
+gulp.task('setup', ['fonts']);
 
-// Build task with dist creation
-gulp.task('build', ['default', 'copy']);
-
-// Clean task
-// gulp.task('build')
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'default'], function() {
-    gulp.watch('less/*.less', ['less']);
+// Dev task with browserSync and watch
+gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
+    gulp.watch(['less/*.less', 'vendor/bootstrap/dist/js/npm.js'], ['less']);
     // Require bootstrap js modules as neeeded in ../npm.js
-    gulp.watch(['js/theme.js', 'node_modules/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js']);
+    gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js']);
     // Reloads the browser whenever HTML CSS or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('css/*.css', browserSync.reload);
     gulp.watch('js/*.js', browserSync.reload);
 });
+
+// Default build task with dist creation
+gulp.task('default', ['dist']);
