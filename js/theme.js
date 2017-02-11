@@ -12,7 +12,7 @@ jQuery.noConflict(true);
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', function(event) {
+    $('.page-scroll a').bind('click', event => {
         let $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -27,7 +27,7 @@ jQuery.noConflict(true);
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-collapse ul li a').click( () => { 
         $('.navbar-toggle:visible').click();
     });
 
@@ -46,7 +46,7 @@ jQuery.noConflict(true);
         teaserHTML = $('.portfolio-wrap'),
         showMore = $('.show-more');
 
-        exports.init = function(count, domElement = teaserHTML){
+        exports.init = (count, domElement = teaserHTML) => {
 
             // Add ajax-loading
             $(domElement).addClass('loading');
@@ -55,7 +55,7 @@ jQuery.noConflict(true);
             exports.ajaxCall(count, domElement);
         };  
 
-        exports.ajaxCall = function(count, domElement){
+        exports.ajaxCall = (count, domElement) => {
 
             let teaserContent = '',
                 portfolioContent = '',
@@ -69,10 +69,11 @@ jQuery.noConflict(true);
                 limit = current + count;
     
             // Ajax call
-            jqxhr = $.getJSON( "js/data.json", function() {
+            jqxhr = $.getJSON( "js/data.json", () => {
 
             })
-            .done(function(data) {
+            // Success
+            .done( (data) => {
 
                 // Begin loop
                 for(let i = current; i < limit; i++){
@@ -150,21 +151,18 @@ jQuery.noConflict(true);
                 portfolioHTML.after(portfolioContent);
 
             })
-            .fail(function() {
-                // Display error
+            // Display error
+            .fail( () => {
+                
                 teaserHTML.append(
                     `<div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>`
                     );
             })
-            .always(function(){
-                // Remove loading
-                exports.removeLoading(domElement);
-            });
+            // Remove loading
+            .always( () => exports.removeLoading(domElement)); 
 
             // Declare removeLoading func
-            exports.removeLoading = function(element){
-                $(element).removeClass('loading');
-            };
+            exports.removeLoading = element => $(element).removeClass('loading');
         };
 
         return exports;
@@ -175,12 +173,10 @@ jQuery.noConflict(true);
     // @Params: init (number of items to be displayed)
     displayPortfolios.init(6);
 
-    // Show more button
-    $('.show-more').on('click', function(event){
-        // Run displayPortfolios func on click
-        // @Params: init (number of items to be displayed)
-        //          event (clickable event)
-        displayPortfolios.init(3, $(event.currentTarget));
-    });
+    // Show more button function
+    // Run displayPortfolios func on click
+    // @Param: init - number of items to be displayed
+    // @Param: object - clickable event
+    $('.show-more').on('click', event => displayPortfolios.init(3, $(event.currentTarget) ));
 
 }(jQuery); // End of use strict
