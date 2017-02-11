@@ -81,7 +81,7 @@ jQuery.noConflict(true);
                     // Check if current portfolio exists
                     if (data[i] === undefined) {
 
-                        // Change show-more button -> no-more
+                        // Change 'show more' text -> 'no more'
                         showMore.html('No more').attr('disabled', 'true');
 
                         // Break out of loop
