@@ -1,136 +1,43 @@
 [
     {
-        "title": "Project Title 1",
+        "title": "Home Beauty Salon",
         "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/cake.png",
-                "full": "img/portfolio/cake.png"
+            "logo": {
+                "small": {
+                    "url": "img/portfolio/restandrestore-logo.jpg",
+                    "width": "350w"
+                },
+                "meduim": {
+                    "url": "img/portfolio/restandrestore-logo.jpg",
+                    "width": "1000w"
+                },
+                "large": {
+                    "url": "img/portfolio/restandrestore-logo.jpg",
+                    "width": "2000w"
+                },
+                "alt": "Logo"
+            },
+            "main": {
+                "small": {
+                    "url": "img/portfolio/restandrestore-main.jpg",
+                    "width": "350w"
+                },
+                "meduim": {
+                    "url": "img/portfolio/restandrestore-main.jpg",
+                    "width": "1000w"
+                },
+                "large": {
+                    "url": "img/portfolio/restandrestore-main.jpg",
+                    "width": "2000w"
+                },
+                "alt": "Logo"
             }
         },
         "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
+        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
         "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 2",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/cabin.png",
-                "full": "img/portfolio/cabin.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 3",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/safe.png",
-                "full": "img/portfolio/safe.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 4",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/submarine.png",
-                "full": "img/portfolio/submarine.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 5",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/circus.png",
-                "full": "img/portfolio/circus.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 6",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/game.png",
-                "full": "img/portfolio/game.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 7",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/cake.png",
-                "full": "img/portfolio/cake.png"
-            }
-        },
-        "url": "#",
-        "description": "Use this area of the page to describe your project. The icon above is part of a free icon set byFlat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Project Title 8",
-        "img": {
-            "sizes": {
-                "thumbnail": "img/portfolio/cabin.png",
-                "full": "img/portfolio/cabin.png"
-            }
-        },
-        "url": "#",
-        "description": "<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href='https://sellfy.com/p/8Q9P/jV3VZ/'>Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>",
-        "client": {
-            "name": "Start Bootstrap",
-            "url": "#"
+            "name": "Rest & Restore",
+            "url": "htto://restandrestore.co.uk"
         },
         "date": "April 2014",
         "service": "Web Development"
