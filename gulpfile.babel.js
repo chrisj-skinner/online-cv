@@ -77,7 +77,7 @@ gulp.task('fonts', ['copy'], function(){
 
 // Clean up task
 gulp.task('clean', function(){
-    del(['css/main.css'])
+    del(['dist'])
 });
 
 // Create dist folder
@@ -107,7 +107,7 @@ gulp.task('setup', ['fonts']);
 // Dev task with browserSync and watch
 gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
     // Watch file changes
-    gulp.watch(['less/*.less', 'vendor/bootstrap/less/bootstrap.less'], ['less']);
+    gulp.watch(['less/*.less', 'vendor/bootstrap/less/bootstrap.less'], ['minify-css']);
     gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js'] );
     // Reloads the browser on file change
     gulp.watch('*.html', browserSync.reload);
