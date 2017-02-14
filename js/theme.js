@@ -96,7 +96,7 @@ jQuery.noConflict(true);
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="${data[i].img.sizes.thumbnail}" class="img-responsive" alt="">
+                            <img src="${data[i].img.logo.small.url}" srcset="${data[i].img.logo.meduim.url} ${data[i].img.logo.meduim.width}, ${data[i].img.logo.large.url} ${data[i].img.logo.large.width}" class="img-responsive" alt="${data[i].img.logo.alt}">
                         </a>
                     </div>`;
 
@@ -115,7 +115,7 @@ jQuery.noConflict(true);
                                         <div class="modal-body">
                                         <h2>${data[i].title}</h2>
                                         <hr class="star-primary">
-                                        <img src="${data[i].img.sizes.full}" class="img-responsive img-centered" alt="">
+                                        <img src="${data[i].img.main.small.url}"  class="img-responsive img-centered" alt="${data[i].img.main.alt}">
                                         <p>${data[i].description}</p>
                                         <ul class="list-inline item-details">
                                             <li>Client:
