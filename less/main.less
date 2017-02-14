@@ -4,12 +4,13 @@
 @import "mixins";
 
 body {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: @font-family;
 	overflow-x: hidden;
 }
 
 p {
-	font-size: 20px;
+	font-size: 15px;
+	line-height: 22px;
 }
 
 p.small {
@@ -26,7 +27,7 @@ a.active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: @font-family;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -74,13 +75,20 @@ hr.star-primary:after {
 	margin: 0 auto;
 }
 
+header, section { height: 100vh;}
+
+// Header
+
 header {
 	text-align: center;
-	background: @theme-success;
+	background: @white;
 	color: white;
 	.container {
-		padding-top: 100px;
-		padding-bottom: 50px;
+		width: 100%;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
 	}
 	img {
 		display: block;
@@ -89,40 +97,38 @@ header {
 	.intro-text {
 		.name {
 			display: block;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family: @font-family;
 			text-transform: uppercase;
-			font-weight: 700;
-			font-size: 2em;
+			line-height: 1em;
+			font-size: 2.8em;
+			@media(min-width:321px){
+				font-size: 3em;
+			}
+			@media(min-width:768px) {
+				font-size: 4em;
+			}
+			color: @theme-primary;
 		}
 		.skills {
-			font-size: 1.25em;
-			font-weight: 300;
+			font-size: 0.82em;
+			@media(min-width:321px){
+				font-size: 0.88em;
+			}
+			@media(min-width:768px) {
+				font-size: 1.18em;
+			}
+			
+			color: @theme-secondary;
 		}
 	}
 }
 
-@media(min-width:768px) {
-	header {
-		.container {
-			padding-top: 200px;
-			padding-bottom: 100px;
-		}
-		.intro-text {
-			.name {
-				font-size: 4.75em;
-			}
-			.skills {
-				font-size: 1.75em;
-			}
-		}
-	}
-}
+// Navbar
 
 .navbar-custom {
-	background: @theme-primary;
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: @white;
+	font-family: @font-family;
 	text-transform: uppercase;
-	font-weight: 700;
 	border: none;
 	a:focus {
 		outline: none;
@@ -141,15 +147,13 @@ header {
 		letter-spacing: 1px;
 		li {
 			a {
-				color: white;
+				color: @theme-primary;
 				&:hover {
 					color: @theme-success;
 					outline: none;
 				}
 				&:focus,
-				&:active {
-					color: white;
-				}
+				&:active {}
 			}
 			&.active {
 				a {
@@ -166,10 +170,10 @@ header {
 		}
 	}
 	.navbar-toggle {
-		color: white;
+		color: @theme-primary;
 		text-transform: uppercase;
 		font-size: 10px;
-		border-color: white;
+		border-color: @theme-primary;
 		&:hover,
 		&:focus {
 			background-color: @theme-success;
@@ -177,6 +181,7 @@ header {
 			border-color: @theme-success;
 		}
 	}
+	.container { border-bottom: 1px solid @theme-primary; }
 }
 
 @media(min-width:768px) {
@@ -199,7 +204,7 @@ header {
 
     }
     .navbar-custom.affix {
-        padding: 10px 0;
+        padding: 10px 0 0;
 		.navbar-brand {
 	        font-size: 1.5em;
 	    }
@@ -495,4 +500,23 @@ footer {
     	opacity: 0;
     	display: none;
     }
+}
+
+#mainNav {
+	// background: white;
+	.container {
+		
+		
+		li a {
+			// color: #333;
+		}
+	}
+}
+
+.custom-images {
+	margin-bottom: 20px;
+	display: block;
+	&:first-child {
+		border-bottom: 1px solid #333;
+	}
 }
