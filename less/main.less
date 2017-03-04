@@ -22,66 +22,37 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @theme-success;
+	color: @cyan;
 	outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family;
 	text-transform: uppercase;
-	font-weight: 700;
 }
 
-hr.star-light,
-hr.star-primary {
+hr.standard {
     padding: 0;
     border: none;
-    border-top: solid 5px;
+    border-top: solid 1px;
     text-align: center;
     max-width: 250px;
-    margin: 25px auto 30px;
-}
-
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    font-family: FontAwesome;
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    font-size: 2em;
-    padding: 0 0.25em;
-}
-
-hr.star-light {
-    border-color: white;
-}
-
-hr.star-light:after {
-    background-color: @theme-success;
-    color: white;
-}
-
-hr.star-primary {
-    border-color: @theme-primary;
-}
-
-hr.star-primary:after {
-    background-color: white;
-    color: @theme-primary;
+    margin: 10px auto 15px;
 }
 
 .img-centered {
 	margin: 0 auto;
 }
 
-header, section { height: 100vh;}
+i.skill { color: @cyan; }
+
+header, section { min-height: 100vh;}
 
 // Header
 
 header {
 	text-align: center;
-	background: @white;
+	background: white;
 	color: white;
 	.container {
 		width: 100%;
@@ -118,7 +89,7 @@ header {
 				font-size: 1.18em;
 			}
 			
-			color: @theme-secondary;
+			color: @cyan;
 		}
 	}
 }
@@ -126,7 +97,7 @@ header {
 // Navbar
 
 .navbar-custom {
-	background: @white;
+	background: white;
 	font-family: @font-family;
 	text-transform: uppercase;
 	border: none;
@@ -149,7 +120,7 @@ header {
 			a {
 				color: @theme-primary;
 				&:hover {
-					color: @theme-success;
+					color: @cyan;
 					outline: none;
 				}
 				&:focus,
@@ -158,12 +129,12 @@ header {
 			&.active {
 				a {
 					color: white;
-					background: @theme-success;
+					background: @theme-secondary;
 					&:hover,
 					&:focus,
 					&:active {
 						color: white;
-						background: @theme-success;
+						background: @theme-secondary;
 					}
 				}
 			}
@@ -176,9 +147,9 @@ header {
 		border-color: @theme-primary;
 		&:hover,
 		&:focus {
-			background-color: @theme-success;
+			background-color: @theme-secondary;
 			color: white;
-			border-color: @theme-success;
+			border-color: @theme-secondary;
 		}
 	}
 	.container { border-bottom: 1px solid @theme-primary; }
@@ -204,7 +175,7 @@ header {
 
     }
     .navbar-custom.affix {
-        padding: 10px 0 0;
+        padding: 0;
 		.navbar-brand {
 	        font-size: 1.5em;
 	    }
@@ -217,7 +188,7 @@ header {
 }
 
 section {
-    padding: 100px 0;
+    padding: 60px 0;
     h2 {
     	margin: 0;
     	font-size: 3em;
@@ -225,7 +196,7 @@ section {
 }
 
 section.success {
-	background: @theme-success;
+	background: @theme-primary;
 	color: white;
 }
 
@@ -239,8 +210,11 @@ section.success {
 }
 
 #portfolio {
-	.portfolio-wrap.loading {
-		min-height: 300px;
+	.portfolio-wrap {
+		padding-top: 40px;
+		&.loading {
+			min-height: 300px;
+		}
 	}
     .portfolio-item {
         margin: 0 0 15px;
@@ -251,7 +225,7 @@ section.success {
             max-width: 400px;
             margin: 0 auto;
             .caption {
-                background: fade(@theme-success, 90%);
+                background: fade(@theme-secondary, 90%);
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -349,7 +323,7 @@ section.success {
 
 .floating-label-form-group-with-focus {
 	label {
-	    color: @theme-success;
+	    color: @theme-secondary;
 	}
 }
 
@@ -378,9 +352,9 @@ footer {
 // Buttons
 
 .btn-outline {
-	color: white;
+	color: @theme-primary;
 	font-size: 20px;
-	border: solid 2px white;
+	border: solid 2px @theme-primary;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
 	margin-top: 15px;
@@ -388,9 +362,8 @@ footer {
 	&:focus,
 	&:active,
 	&.active {
-		color: @theme-success;
+		color: @theme-primary;
 		background: white;
-		border: solid 2px white;
 	}
 }
 
@@ -400,11 +373,12 @@ footer {
 }
 
 .btn-success {
-	.button-variant(white; @theme-success; @theme-success);
+	.button-variant(white; @theme-secondary; @theme-secondary);
 	font-weight: 700;
 }
 
 .btn-social {
+	color: white;
 	display: inline-block;
 	height: 50px;
 	width: 50px;
@@ -502,21 +476,8 @@ footer {
     }
 }
 
-#mainNav {
-	// background: white;
-	.container {
-		
-		
-		li a {
-			// color: #333;
-		}
-	}
-}
-
-.custom-images {
-	margin-bottom: 20px;
-	display: block;
-	&:first-child {
-		border-bottom: 1px solid #333;
+.container {	
+	@media (min-width: @screen-md-min), (min-width: @screen-lg-min) {
+		width: 768px;
 	}
 }
