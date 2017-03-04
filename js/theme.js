@@ -96,7 +96,7 @@ jQuery.noConflict(true);
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="${data[i].img.logo.small.url}" srcset="${data[i].img.logo.meduim.url} ${data[i].img.logo.meduim.width}, ${data[i].img.logo.large.url} ${data[i].img.logo.large.width}" class="img-responsive" alt="${data[i].img.logo.alt}">
+                            <img src="${data[i].img.logo.small.url}" class="img-responsive" alt="${data[i].img.logo.alt}">
                         </a>
                     </div>`;
 
