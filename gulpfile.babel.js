@@ -21,9 +21,6 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
 });
 
 // Concat CSS
@@ -32,8 +29,10 @@ gulp.task('less', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/main.css')
+        .pipe(maps.init())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename('main.min.css'))
+        .pipe(maps.write('./'))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -48,9 +47,12 @@ gulp.task('minify-js', function() {
         .pipe(source('main.min.js'))
         .pipe(buffer())
         .pipe(maps.init()) // create sourcemap
-        .pipe(uglify()) // minify
+        .pipe(uglify())
         .pipe(maps.write('./')) // write sourcemap
         .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // Copy vendor libraries from /node_modules into /vendor
@@ -83,7 +85,7 @@ gulp.task('clean', function(){
 // Create dist folder
 gulp.task('dist', ['clean'], function() {
     return gulp.src([
-        'css/*.min.css*',
+        'css/*.min.*',
         'js/*.min.js*',
         'fonts/*',
         'index.html',
@@ -111,8 +113,6 @@ gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
     gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js'] );
     // Reloads the browser on file change
     gulp.watch('*.html', browserSync.reload);
-    gulp.watch('css/*.css', browserSync.reload);
-    gulp.watch('js/main.min.js', browserSync.reload);
 });
 
 // Default build task with dist creation
