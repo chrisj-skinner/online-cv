@@ -6,7 +6,6 @@ import rename from "gulp-rename";
 import uglify from 'gulp-uglify';
 import maps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
-import concat from 'gulp-concat';
 import del from 'del';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
@@ -23,9 +22,6 @@ gulp.task('less', function() {
         .pipe(gulp.dest('css'))
 });
 
-// Concat CSS
-
-
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/main.css')
@@ -39,7 +35,7 @@ gulp.task('minify-css', ['less'], function() {
         }))
 });
 
-// Concat Minify Browserify SourceMap JS 
+// Concat Minify Browserify SourceMap JS
 gulp.task('minify-js', function() {
     return browserify('js/theme.js')
         .transform('babelify')
