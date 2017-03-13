@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import less from 'gulp-less';
 import browserSync from 'browser-sync';
 import cleanCSS from 'gulp-clean-css';
-import rename from "gulp-rename";
+import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
 import maps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
@@ -19,7 +19,7 @@ gulp.task('less', function() {
         .pipe(maps.init())
         .pipe(less())
         .pipe(maps.write('./'))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('css'));
 });
 
 // Minify compiled CSS
@@ -32,7 +32,7 @@ gulp.task('minify-css', ['less'], function() {
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 
 // Concat Minify Browserify SourceMap JS
@@ -48,7 +48,7 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({
             stream: true
-        }))
+        }));
 });
 
 // Copy vendor libraries from /node_modules into /vendor
@@ -61,7 +61,7 @@ gulp.task('copy', function() {
     gulp.src([
         'node_modules/font-awesome/**',
         ])
-    .pipe(gulp.dest('vendor/font-awesome'))
+    .pipe(gulp.dest('vendor/font-awesome'));
 });
 
 // Copy fonts over
@@ -70,12 +70,12 @@ gulp.task('fonts', ['copy'], function(){
         'vendor/bootstrap/fonts/**',
         'vendor/font-awesome/fonts/**'
         ])
-    .pipe(gulp.dest('fonts'))
+    .pipe(gulp.dest('fonts'));
 });
 
 // Clean up task
 gulp.task('clean', function(){
-    del(['dist'])
+    del(['dist']);
 });
 
 // Create dist folder
@@ -87,7 +87,7 @@ gulp.task('dist', ['clean'], function() {
         'index.html',
         'img/**'],
         { base: './' })
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'));
 });
 
 // Configure the browserSync task
@@ -96,7 +96,7 @@ gulp.task('browserSync', function() {
         server: {
             baseDir: ''
         },
-    })
+    });
 });
 
 // NOTE: First run everything to get setup
