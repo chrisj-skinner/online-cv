@@ -9,7 +9,7 @@ jQuery.noConflict(true);
 
 // Theme JavaScript
 !function($) {
-    "use strict"; // Start of use strict
+    'use strict'; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('.page-scroll a').bind('click', function(event) {
@@ -27,7 +27,7 @@ jQuery.noConflict(true);
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click( () => { 
+    $('.navbar-collapse ul li a').click( () => {
         $('.navbar-toggle:visible').click();
     });
 
@@ -53,13 +53,12 @@ jQuery.noConflict(true);
 
             // Call ajaxCall func
             exports.ajaxCall(count, domElement);
-        };  
+        };
 
         exports.ajaxCall = (count, domElement) => {
 
             let teaserContent = '',
                 portfolioContent = '',
-                portfolios,
                 jqxhr,
                 // Portfolio Modal popups
                 portfolioHTML = $('.portfolio-modal').last(),
@@ -67,9 +66,9 @@ jQuery.noConflict(true);
                 current = $('.portfolio-item').length,
                 // Set the limit
                 limit = current + count;
-    
+
             // Ajax call
-            jqxhr = $.getJSON( "js/data.json", () => {
+            jqxhr = $.getJSON( 'js/data.json', () => {
 
             })
             // Success
@@ -86,7 +85,7 @@ jQuery.noConflict(true);
 
                         // Break out of loop
                         break;
-                    };
+                    }
 
                     // Build html teaserContent
                     teaserContent += `<div class="col-sm-4 portfolio-item">
@@ -153,13 +152,13 @@ jQuery.noConflict(true);
             })
             // Display error
             .fail( () => {
-                
-                teaserHTML.append(
-                    `<div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>`
-                    );
+
+                teaserHTML.append(`
+                    <div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>
+                    `);
             })
             // Remove loading
-            .always( () => exports.removeLoading(domElement)); 
+            .always( () => exports.removeLoading(domElement));
 
             // Declare removeLoading func
             exports.removeLoading = element => $(element).removeClass('loading');
