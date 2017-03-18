@@ -41,7 +41,7 @@ jQuery.noConflict(true);
     // Display portfolios
     const displayPortfolios = (function(){
 
-        let exports = {},
+        const exports = {},
         // Intro to portfolios
         teaserHTML = $('.portfolio-wrap'),
         showMore = $('.show-more');
