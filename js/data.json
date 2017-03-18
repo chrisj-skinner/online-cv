@@ -1,346 +1,170 @@
 [
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    },
-    {
-        "title": "Home Beauty Salon",
-        "img": {
-            "logo": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-logo-v2.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-logo.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            },
-            "main": {
-                "small": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "350w"
-                },
-                "meduim": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "1000w"
-                },
-                "large": {
-                    "url": "img/portfolio/restandrestore-main.jpg",
-                    "width": "2000w"
-                },
-                "alt": "Logo"
-            }
-        },
-        "url": "#",
-        "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
-        "client": {
-            "name": "Rest & Restore",
-            "url": "htto://restandrestore.co.uk"
-        },
-        "date": "April 2014",
-        "service": "Web Development"
-    }
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   },
+   {
+      "title": "Home Beauty Salon",
+      "img": {
+         "logo": {
+            "url": "img/portfolio/restandrestore-logo-v2.jpg",
+            "alt": "Logo",
+         },
+         "main": {
+            "url": "img/portfolio/restandrestore-main.jpg",
+            "alt": "Main Image",
+         }
+      },
+      "url": "#",
+      "description": "Restandrestore is a private home salon and spa website build on WordPress. Incorporating multiple plugins including custom enhancements to simple retail menus plugin inline with the clients site specifications.",
+      "client": {
+           "name": "Rest & Restore",
+           "url": "htto://restandrestore.co.uk"
+      },
+      "date": "April 2014",
+      "service": "Web Development"
+   }
 ]
