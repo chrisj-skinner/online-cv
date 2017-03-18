@@ -70,9 +70,9 @@ jQuery.noConflict(true);
             // Ajax call
             jqxhr = $.getJSON( 'js/data.json', () => {
 
-            })
+            });
             // Success
-            .done( (data) => {
+            jqxhr.done( (data) => {
 
                 // Begin loop
                 for(let i = current; i < limit; i++){
@@ -149,16 +149,16 @@ jQuery.noConflict(true);
                 // Add portfolioContent to html
                 portfolioHTML.after(portfolioContent);
 
-            })
+            });
             // Display error
-            .fail( () => {
+            jqxhr.fail( () => {
 
                 teaserHTML.append(`
                     <div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>
                     `);
-            })
+            });
             // Remove loading
-            .always( () => exports.removeLoading(domElement));
+            jqxhr.always( () => exports.removeLoading(domElement));
 
             // Declare removeLoading func
             exports.removeLoading = element => $(element).removeClass('loading');
