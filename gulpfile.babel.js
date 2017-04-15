@@ -5,7 +5,6 @@ import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
 import maps from 'gulp-sourcemaps';
-import babel from 'gulp-babel';
 import del from 'del';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
@@ -106,7 +105,7 @@ gulp.task('setup', ['fonts']);
 gulp.task('dev', ['browserSync', 'minify-css', 'minify-js'], function() {
     // Watch file changes
     gulp.watch(['less/*.less', 'vendor/bootstrap/less/bootstrap.less'], ['minify-css']);
-    gulp.watch(['js/*.js', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js'] );
+    gulp.watch(['js/*.js', 'js/*.json', 'vendor/bootstrap/dist/js/npm.js', '!js/*.min.js'], ['minify-js'] );
     // Reloads the browser on file change
     gulp.watch('*.html', browserSync.reload);
 });
