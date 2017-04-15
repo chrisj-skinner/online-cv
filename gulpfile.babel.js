@@ -36,7 +36,7 @@ gulp.task('minify-css', ['less'], function() {
 
 // Concat Minify Browserify SourceMap JS
 gulp.task('minify-js', function() {
-    return browserify('js/theme.js')
+    return browserify('js/app.js')
         .transform('babelify')
         .bundle()
         .pipe(source('main.min.js'))
