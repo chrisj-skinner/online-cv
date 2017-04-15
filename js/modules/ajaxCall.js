@@ -36,7 +36,7 @@ jQuery.noConflict(true);
                 limit = current + count;
 
             // Ajax call
-            jqxhr = $.getJSON('js/data.json');
+            jqxhr = $.getJSON('./js/data.json');
 
             // Success
             jqxhr.done( (data) => {
