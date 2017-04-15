@@ -1,47 +1,15 @@
 // Dependencies
 var jQuery = require('jquery');
 window.$ = window.jQuery = jQuery;
-
-require('../vendor/bootstrap/dist/js/npm.js');
-require('jquery.easing');
-
 jQuery.noConflict(true);
 
 // Theme JavaScript
 !function($) {
-    "use strict"; // Start of use strict
-
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', function(event) {
-        let $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
-    });
-
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    });
-
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click( () => { 
-        $('.navbar-toggle:visible').click();
-    });
-
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    });
 
     // Display portfolios
     const displayPortfolios = (function(){
 
-        let exports = {},
+        const exports = {},
         // Intro to portfolios
         teaserHTML = $('.portfolio-wrap'),
         showMore = $('.show-more');
@@ -53,13 +21,12 @@ jQuery.noConflict(true);
 
             // Call ajaxCall func
             exports.ajaxCall(count, domElement);
-        };  
+        };
 
         exports.ajaxCall = (count, domElement) => {
 
             let teaserContent = '',
                 portfolioContent = '',
-                portfolios,
                 jqxhr,
                 // Portfolio Modal popups
                 portfolioHTML = $('.portfolio-modal').last(),
@@ -67,13 +34,12 @@ jQuery.noConflict(true);
                 current = $('.portfolio-item').length,
                 // Set the limit
                 limit = current + count;
-    
-            // Ajax call
-            jqxhr = $.getJSON( "js/data.json", () => {
 
-            })
+            // Ajax call
+            jqxhr = $.getJSON('js/data.json');
+
             // Success
-            .done( (data) => {
+            jqxhr.done( (data) => {
 
                 // Begin loop
                 for(let i = current; i < limit; i++){
@@ -86,7 +52,7 @@ jQuery.noConflict(true);
 
                         // Break out of loop
                         break;
-                    };
+                    }
 
                     // Build html teaserContent
                     teaserContent += `<div class="col-sm-4 portfolio-item">
@@ -96,7 +62,7 @@ jQuery.noConflict(true);
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="${data[i].img.logo.small.url}" class="img-responsive" alt="${data[i].img.logo.alt}">
+                            <img src="${data[i].img.logo.url}" class="img-responsive" alt="${data[i].img.logo.alt}">
                         </a>
                     </div>`;
 
@@ -115,7 +81,7 @@ jQuery.noConflict(true);
                                         <div class="modal-body">
                                         <h2>${data[i].title}</h2>
                                         <hr class="star-primary">
-                                        <img src="${data[i].img.main.small.url}"  class="img-responsive img-centered" alt="${data[i].img.main.alt}">
+                                        <img src="${data[i].img.main.url}"  class="img-responsive img-centered" alt="${data[i].img.main.alt}">
                                         <p>${data[i].description}</p>
                                         <ul class="list-inline item-details">
                                             <li>Client:
@@ -150,16 +116,15 @@ jQuery.noConflict(true);
                 // Add portfolioContent to html
                 portfolioHTML.after(portfolioContent);
 
-            })
+            });
             // Display error
-            .fail( () => {
-                
-                teaserHTML.append(
-                    `<div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>`
-                    );
-            })
+            jqxhr.fail( () => {
+                teaserHTML.append(`
+                    <div class="panel panel-body panel-warning">Could not load portfolios at this time - please try again later</div>
+                    `);
+            });
             // Remove loading
-            .always( () => exports.removeLoading(domElement)); 
+            jqxhr.always( () => exports.removeLoading(domElement));
 
             // Declare removeLoading func
             exports.removeLoading = element => $(element).removeClass('loading');
