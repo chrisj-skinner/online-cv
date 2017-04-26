@@ -1,6 +1,6 @@
-# Chris Skinner Portfolio Site A fork of Start Bootstrap (http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+# Chris Skinner Portfolio Site
 
-A new portfolio site in the making - comming soon!
+A new portfolio site in the making. A fork of [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 
 ## Modifications
 
