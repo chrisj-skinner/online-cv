@@ -1,19 +1,10 @@
-# Chris Skinner Portfolio Site
+Online CV using Pure CSS
+========================
 
-A new portfolio site in the making. A fork of [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+License
+-------
 
-## Modifications
+This software is free to use under the zLib license.
+See the [zLib][] license for more information.
 
-New npm modules added:   
-browserify, gulp-sourcemaps, gulp-babel, gulp-concat, del, vinyl-source-stream, vinyl-buffer  
-
-New tasks declared:  
-minify-js, copy, dist, clean  
-See [gulpfile.babel.js](https://github.com/chrisj-skinner/chrisj-skinner.github.io/LICENSE)
-
-## Bugs and Issues
-
-
-## Copyright and License
-
-Copyright 2017 chrisskinner.co code released under the [MIT](https://github.com/chrisj-skinner/chrisj-skinner.github.io/LICENSE) license.
+[zLib]: http://www.zlib.net/zlib_license.html
