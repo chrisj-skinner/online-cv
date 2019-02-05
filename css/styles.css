@@ -27,7 +27,7 @@ h3 {
 }
 
 .header-content {
-    background: transparent url('../../img/logo/logo.png') no-repeat center;
+    background: transparent url('../img/logo/logo.png') no-repeat center;
     min-height: 104px;
     margin: 1.5em 0;
     text-align: center;
@@ -78,6 +78,7 @@ h3 {
     color: #fff;
     background: #999;
     font-size: 80%;
+    min-width: 80px;
     display: inline-block;
     margin: 0 .2em .2em;
     text-align: center;
@@ -156,7 +157,7 @@ h3 {
     }
 
     .header-content {
-      background: transparent url('../../img/logo/hero.png') no-repeat center / contain;
+      background: transparent url('../img/logo/hero.png') no-repeat center / contain;
       margin: 0em 1.5em 0 2em;
       height: 100%;
     }
