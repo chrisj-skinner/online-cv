@@ -1,8 +1,3 @@
-node_modules
+.babelrc
 .DS_Store
-vendor
-js/main.*
-css
-fonts
-dist
-img/PSD/
+.json
