@@ -76,7 +76,7 @@ h3 {
     margin: 0 0.1em;
     padding: 0.3em 1em;
     color: #fff;
-    background: #999;
+    background: rgb(112, 112, 112);
     font-size: 80%;
     min-width: 80px;
     display: inline-block;
