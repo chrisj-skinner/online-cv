@@ -84,40 +84,38 @@ h3 {
     text-align: center;
     padding: .2em;
 }
-    .category-html {
-        background: #5aba59;
-    }
-    .category-css {
-        background: #4d85d1;
-    }
-    .category-yui {
-        background: #8156a7;
-    }
-    .category-js {
-        background: #F8D411;
-        color: #222;
-    }
-    .category-vue {
-      background-color: #41B883;
-    }
-    .category-angular {
-      background: #DD0030
-    }
-    .category-webpack {
-      background: #6091A9
-    }
-    .category-github {
-      background: #24292D
-    }
-    .category-vscode {
-      background: #373277
-    }
-    .category-jasmin {
-      background: #8A4182
-    }
-    .category-jira {
-      background: #2684FF
-    }
+
+.backrgound-color-green {
+    background: #5aba59;
+}
+.backrgound-color-lightblue {
+    background: #4d85d1;
+}
+.backrgound-color-yellow {
+    background: #F8D411;
+    color: #222;
+}
+.backrgound-color-green {
+  background-color: #41B883;
+}
+.backrgound-color-red {
+  background: #DD0030
+}
+.backrgound-color-darkblue {
+  background: #6091A9
+}
+.backrgound-color-black {
+  background: #24292D
+}
+.backrgound-color-darkblue {
+  background: #373277
+}
+.backrgound-color-purple {
+  background: #8A4182
+}
+.backrgound-color-blue {
+  background: #2684FF
+}
 
 .footer {
     padding: 1em 0;
